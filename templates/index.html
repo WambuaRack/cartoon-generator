@@ -1,0 +1,20 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoonizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image</h1>
+        <form action="{{ url_for('cartoonize') }}" method="post" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="image" accept=".jpg, .jpeg, .png">
+            <button type="submit" class="upload-btn">Upload Image</button>
+        </form>
+    </div>
+</body>
+</html>
